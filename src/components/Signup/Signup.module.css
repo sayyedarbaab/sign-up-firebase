@@ -9,16 +9,24 @@
 }
 
 .innerBox {
-  min-width: 480px;
+  min-width: 430px;
   height: fit-content;
   width: fit-content;
   background-color: #fff;
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 12px 12px 4px rgba(0, 0, 0, 0.2);
   padding: 30px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 0px;
+}
+
+.heading {
+  color: black;
+  text-align: center;
+}
+label {
+  margin-top: 10px;
 }
 
 .footer {
@@ -30,7 +38,7 @@
 .footer .error {
   font-weight: bold;
   font-size: 0.875rem;
-  color: #ff3300;
+  color: #ff3300; /* Red color for error */
   text-align: center;
 }
 
@@ -46,6 +54,7 @@
   width: 100%;
   transition: 100ms;
   cursor: pointer;
+  margin-top: 15px;
 }
 
 .footer button:disabled {
@@ -67,4 +76,16 @@
   letter-spacing: 1px;
   font-size: 1rem;
   text-decoration: none;
+}
+
+/* Gap for spacing when fields are not filled */
+.error {
+  margin-top: 10px;
+  color: #ff3300;
+  margin-bottom: 10px;
+}
+
+/* Style required fields */
+.required {
+  color: red;
 }
