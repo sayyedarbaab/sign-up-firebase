@@ -41,7 +41,7 @@ function Login() {
     signInWithEmailAndPassword(auth, values.email, values.pass)
       .then(async (res) => {
         setSubmitButtonDisabled(false);
-        navigate("/home"); // Redirect to Home page
+        navigate("/home"); 
       })
       .catch((err) => {
         setSubmitButtonDisabled(false);

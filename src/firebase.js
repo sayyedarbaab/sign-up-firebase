@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 const firebaseConfig = {
   apiKey: "AIzaSyBojMKMNZy_k_HViZks9bugmlfeNeL4C5o",
   authDomain: "blogging-app-d4e68.firebaseapp.com",
@@ -8,7 +9,8 @@ const firebaseConfig = {
   messagingSenderId: "672775429010",
   appId: "1:672775429010:web:38ac3a6f541cac1aef3f4b",
 };
-
-const app = initializeApp(firebaseConfig);
-const auth = getAuth();
-export { app, auth };
+const firebaseApp = initializeApp(firebaseConfig);
+const db = getFirestore(firebaseApp);
+const auth = getAuth(firebaseApp);
+export { db };
+export { auth };
